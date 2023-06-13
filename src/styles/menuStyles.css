@@ -1,0 +1,14 @@
+#menuContent{
+    width: 100VW;
+    height: 90vh;
+    left: 0;
+    margin-top: 9vh;
+    background-color: antiquewhite;
+    position: absolute;
+    transition: all .5s ease;
+}
+
+.closeMenu{
+    transition: all .9s ease;
+    left: 100% !important;
+}
