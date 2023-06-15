@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
+import {Link} from 'react-router-dom'
 import '../styles/menuStyles.css';
 
 function MenuComponent({refe}) {
@@ -14,21 +15,23 @@ function MenuComponent({refe}) {
         <>
             <div id='menuContent' ref={refe}>
                 <div>
-                    <p>PÉRFIL</p>
+                    <Link to='/'>Inicio</Link>
                 </div>
                 <div>
-                    <p>TABLA SEMANAL</p>
+                    <Link to='/Perfil'>PÉRFIL</Link>
                 </div>
                 <div>
-                    <p>TABLA GLOBAL</p>
+                    <Link to='/WeekTable'>TABLA SEMANAL</Link>
                 </div>
                 <div>
-                    <p>REGLAS</p>
+                    <Link to='/GlobalTable'>TABLA GLOBAL</Link>
                 </div>
                 <div>
-                    <p>CERRAR SESIÓN</p>
+                    <Link to='/Rules'>REGLAS</Link>
                 </div>
-
+                <div>
+                    <Link to='/SignOut'>CERRAR SESIÓN</Link>
+                </div>
             </div>
         </>
     )
