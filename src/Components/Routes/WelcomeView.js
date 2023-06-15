@@ -17,7 +17,7 @@ function WelcomePage() {
                     <Link to=''>Tabla Global</Link>
                </div>
                <div>
-                    <Link to=''>Reglas</Link>
+                    <Link to='/Rules'>Reglas</Link>
                </div>
           </nav>
      </> );
