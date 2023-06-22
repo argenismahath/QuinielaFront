@@ -1,14 +1,25 @@
+
 #menuContent{
     width: 100VW;
-    height: 90vh;
-    left: 0;
-    margin-top: 9vh;
-    background-color: antiquewhite;
+
+    height: 100vh;
+    right: 0;
+    margin-top: 4vh;
+    background-color: #fff;
     position: absolute;
     transition: all .5s ease;
 }
 
+@keyframes closeMenu {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+        overflow: hidden;
+    }
+}
 .closeMenu{
-    transition: all .9s ease;
-    left: 100% !important;
+    white-space: nowrap;
+    animation: closeMenu .5s ease-in-out forwards;
 }

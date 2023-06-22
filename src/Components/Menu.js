@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom'
 import '../styles/menuStyles.css';
+import PhotographyUserComponent from './PhotographyUserComponent';
 
 function MenuComponent({ refe }) {
     const openMenu = useRef(null);
@@ -15,7 +16,8 @@ function MenuComponent({ refe }) {
         <>
             <div id='menuContent' ref={refe}>
                 <nav>
-
+                    {/* <HeaderComponent  /> */}
+                    <PhotographyUserComponent UserName={'jhon mircha'} ShowLast={false} />
                     <div>
                         <Link to='/'>Inicio</Link>
                     </div>
