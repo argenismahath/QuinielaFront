@@ -16,24 +16,24 @@ function MenuComponent({ refe }) {
         <>
             <div id='menuContent' ref={refe}>
                 <nav>
-                    {/* <HeaderComponent  /> */}
                     <PhotographyUserComponent UserName={'jhon mircha'} ShowLast={false} />
-                    <div>
+                    {/* <HeaderComponent  /> */}
+                    <div className='option firstOption'>
                         <Link to='/'>Inicio</Link>
                     </div>
-                    <div>
+                    <div className='option'>
                         <Link to='/Perfil'>PÉRFIL</Link>
                     </div>
-                    <div>
+                    <div className='option'>
                         <Link to='/WeekTable'>TABLA SEMANAL</Link>
                     </div>
-                    <div>
+                    <div className='option'>
                         <Link to='/GlobalTable'>TABLA GLOBAL</Link>
                     </div>
-                    <div>
+                    <div className='option'>
                         <Link to='/Rules'>REGLAS</Link>
                     </div>
-                    <div>
+                    <div className='option'>
                         <Link to='/SignOut'>CERRAR SESIÓN</Link>
                     </div>
                 </nav>

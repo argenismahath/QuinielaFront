@@ -1,0 +1,63 @@
+p{
+     padding: 0;
+     margin: 0;
+}
+
+#weekContainer {
+     margin-top: 70px;
+}
+
+#weekContainer div {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+#weekContainer div div {
+     display: flex;
+     /* grid-template-columns: .5fr 3fr 1fr; */
+     width: 80%;
+     /* box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.65); */
+     justify-content: space-between;
+     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.65);
+     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.65);
+     margin-bottom: 10px;
+     height: 40px;
+     flex-direction: row;
+     overflow: hidden;
+     border-radius: 9px;
+     border: 1px solid hsl(0deg 0% 97.25%);
+}
+
+.counter {
+     display: flex !important;
+     justify-content: center;
+     background-color: hsl(0deg 0% 22.35%);
+     color: #fff;
+     height: 31px !important;
+     padding: 3px;
+     border-radius: 9px;
+}
+
+#weekContainer div div p {
+     font-weight: 700;
+     text-transform: capitalize;
+     text-align: initial;
+     padding-top: 21px;
+     font-size: 18px;
+     padding-left: 24px;
+}
+
+#weekContainer div div p:last-child{
+     width: 33px;
+     border-left: 1px solid hsl(0deg 0% 92.27%);
+}
+
+#weekContainer div div h3{
+     width: 40px;
+     padding-top: 11px;
+}
+#weekContainer div div p, #weekContainer div div  h3 {
+ height: 100%;
+}

@@ -21,3 +21,6 @@ code {
   display: flex;
 }
 
+ion-icon {
+  font-size: 44px;
+}

@@ -1,10 +1,10 @@
 
 #menuContent{
     width: 100VW;
-
+    top: 0;
     height: 100vh;
     right: 0;
-    margin-top: 4vh;
+    margin-top: 5.5vh;
     background-color: #fff;
     position: absolute;
     transition: all .5s ease;
@@ -22,4 +22,33 @@
 .closeMenu{
     white-space: nowrap;
     animation: closeMenu .5s ease-in-out forwards;
+}
+
+#menuContent nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstOption{
+    margin-top: 60px;
+}
+
+.option{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    height: 39px;
+    border-radius: 8px;
+    background-color: hsl(221.44deg 94.17% 59.61% / 91%);
+    margin-bottom: 20px;
+}
+
+.option a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
 }
