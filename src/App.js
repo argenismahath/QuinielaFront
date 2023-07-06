@@ -9,6 +9,8 @@ import Login from './Components/Routes/LoginComponent';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import RegistroForm from './Components/Routes/newUserComponent';
+import CreateNewGameComponent from './Components/Routes/createNewGame';
+import LigaMxComponent from './Components/Routes/LigaMxComponent';
 
 
 function App() {
@@ -30,10 +32,13 @@ function App() {
         <Route path='/' element={<JourneysTable/>}/>
 
         <Route path='/Rules' element={<RulesComponent/>}/>
+        <Route path='/Liga' element={<LigaMxComponent/>}/>
+
         <Route path='/WeekTable' element={<WeekTableComponent/>}/>
         <Route path='/Jorneys' element={<JourneysTable/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/NewUser' element={<RegistroForm/>}/>
+        <Route path='/NewGame' element={<CreateNewGameComponent/>}/>
 
       </Routes>
     </div>

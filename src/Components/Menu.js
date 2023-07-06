@@ -8,6 +8,8 @@ function MenuComponent({ refe }) {
   const [username, setUsername] = useState('');
   const [login, setLogin] = useState(false);
   const [name, setName] = useState("");
+  const [userId, setUserId] = useState(0);
+
 
 
   const menuStatus = () => {
@@ -44,8 +46,11 @@ function MenuComponent({ refe }) {
         const responseData = await response.json();
         // Trabaja con los datos de respuesta aquí
         setName(responseData.name);
-        setUsername(responseData.usernamw)
-        console.log(responseData);
+        setUsername(responseData.usernamw);
+        setUserId(responseData.id);
+        localStorage.setItem('userName', responseData.name);
+        localStorage.setItem('userId', responseData.id);
+
       } else {
         console.error('Error en la solicitud:', response.status);
       }
@@ -76,6 +81,9 @@ function MenuComponent({ refe }) {
           <Link onClick={menuStatus} to='/Perfil'>PERFIL</Link>
         </div>
         <div className='option'>
+          <Link onClick={menuStatus} to='/Liga'>Liga MX</Link>
+        </div>
+        <div className='option'>
           <Link onClick={menuStatus} to='/Jorneys'>Jornadas</Link>
         </div>
         <div className='option'>
@@ -87,6 +95,9 @@ function MenuComponent({ refe }) {
         <div className='option'>
           <Link onClick={menuStatus} to='/Rules'>REGLAS</Link>
         </div>
+        {userId===1? <div className='option'>
+          <Link onClick={menuStatus} to='/NewGame'>Nuevo juego</Link>
+        </div>:null}
         {login &&
           <div className='option'>
             <Link to='/SignOut' onClick={closeSesion}>CERRAR SESIÓN</Link>
