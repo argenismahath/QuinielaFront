@@ -1,17 +1,19 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import '../styles/WeekTable.css';
+import React, { useState, useEffect } from 'react';
+import '../styles/JourneyTable.css';
+import { Link, useParams } from 'react-router-dom';
 
-function WeekTableComponent() {
+
+function JourneysTable(){
      const [data, setData] = useState([]);
-     const url = 'https://localhost:7154/api/Game/GetWeekTable'
+     const [dataId, setDataid] = useState(0);
+
+     const url = 'https://localhost:7154/api/Game/GetJourneys'
      let counter =0;
      const fetchData = async () => {
           try {
                const response = await fetch(url);
                let resposeJson = await response.json();
-
+               console.log(resposeJson);
                setData(resposeJson)
 
           } catch (error) {
@@ -19,28 +21,34 @@ function WeekTableComponent() {
           }
      };
 
-     useEffect(() => {
+     const getRecords=()=>{
+          
+          setDataid(dataId+1);
+          console.log(dataId);
+     };
 
+     useEffect(() => {
           fetchData();
      }, [])
-     if (data.length < 10) {
+     if (data.length < 1) {
           return <p>Cargando datos...</p>;
      }
      return (
-          <div id='weekContainer'>
+          <div id='JourneysContainer'>
                {/* Utiliza el método map() para iterar sobre los datos y mostrarlos */}
-               <div >
+               <div className='JourneyDataContainer'>
                     {!data ? 'cargando....' :
                          data.map((data, item) => {
                               counter++;
-                              return <div key={counter}><h3 className='counter'>{counter}</h3><p>{data.name}</p><p>{data.points}</p></div>
+                         return <div key={counter}><h3 className='number'>Jornada {counter}</h3><Link onClick={getRecords} to={`?:id=${data.number}`}>{data.name}</Link></div>
                          })
                     };
                     
                </div>
 
           </div>
-);
-}
+     )
+               }
 
-export default WeekTableComponent;
+
+export default JourneysTable;
