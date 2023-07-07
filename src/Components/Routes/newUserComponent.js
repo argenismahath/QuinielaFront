@@ -26,7 +26,7 @@ const RegistroForm = () => {
     fetchData(registroData);
   }
 
-  const url = 'https://localhost:7154/api/Game/AddNewUser'
+  const url = `${localStorage.getItem('URL')}/api/Game/AddNewUser`;
   const fetchData = async (registroData) => {
     try {
       const response = await fetch(url, {

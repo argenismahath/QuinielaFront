@@ -30,7 +30,7 @@ function MenuComponent({ refe }) {
   };
 
   const getUserData = async (userDataname) => {
-    const url = `https://localhost:7154/api/User/Get?username=${userDataname}`;
+    const url = `${localStorage.getItem('URL')}/api/User/Get?username=${userDataname}`;
     const body = '';
   
     try {

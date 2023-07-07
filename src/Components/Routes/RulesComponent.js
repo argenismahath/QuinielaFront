@@ -3,19 +3,69 @@ import React from 'react';
 function RulesComponent() {
      return (
           <>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eu nunc lacinia scelerisque. Morbi fermentum libero et massa vehicula semper. Phasellus sed tortor vel urna iaculis faucibus. Nullam gravida consectetur risus, id laoreet purus sodales ac. Quisque tincidunt lorem in ex ultrices, at semper elit lobortis. Morbi sed hendrerit ante. Suspendisse cursus non dolor non dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec non porta turpis. Nam sodales, dui nec pellentesque pellentesque, ipsum mauris viverra lorem, finibus fringilla tortor nibh eget felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;<br/>
+               <h2>Inscripción</h2> <br />
+               <ul>
+                    <li>Costo semanal $100 por persona, de los cuales $45 serán utilizados para el
+                         acumulado del premio final, $45 para el premio semanal y los otros $10 restantes
+                         se utilizarán para el mantenimiento sitio.
+                    </li>
+               </ul><br />
+               <p>
+                    NOTA: La quiniela abarca las 17 jornadas, repechaje, cuartos de final, semifinal y final de la
+                    Liga MX.
+               </p><br />
+               <p>
+                    <strong>IMPORTANTE:</strong> EL PAGO DEBERA DE ESTAR EFECTUADO ANTES DEL INICIO DE LA
+                    JORNADA, YA QUE DE NO REALIZARSE SERA PUBLICADA LA LISTA CON LAS
+                    PERSONAS FALTANTES Y LOS RESULTADOS NO SE TOMARÁN EN CUENTA
 
-                    Phasellus ipsum ex, luctus a ligula vel, cursus gravida odio. Vestibulum sodales ultricies condimentum. Aenean rhoncus neque ut rutrum sollicitudin. Quisque efficitur libero nec libero tempus, et eleifend urna euismod. Ut dapibus nibh ac auctor pulvinar. Ut elementum nisi vel feugiat consectetur. Aliquam erat volutpat. Donec ornare neque varius sodales scelerisque. Nunc interdum, erat vel auctor consectetur, massa magna cursus metus, vel pretium arcu ante id velit. Aenean eleifend, magna vel tempor dignissim, ante eros ultricies orci, sed sagittis nulla sem eu justo. Etiam non augue vel mi sollicitudin auctor. Donec turpis quam, facilisis eu elit a, viverra cursus ex. Quisque volutpat pellentesque elit, nec malesuada ipsum pretium in. Integer et tellus vitae velit iaculis accumsan. Nunc eu rhoncus lacus.<br/>
+               </p> <br />
+               <p><strong>Instrucciones:</strong></p><br />
+               <p>Una vez realizado tu proceso de inscripción, se te enviará un usuario y contraseña para
+                    poder acceder al nuevo formato de llenado de la Quiniela de la Liga MX. En esta existirán
+                    dos modalidades para poder acceder a los premios, los cuales son:
+               </p><br />
+               <ul>
+                    <li>Premio semanal: Este constara del 45% de lo recaudado en cuotas de participación
+                         y podrán acceder a él la o las personas que logren la mayor cantidad de puntos en
+                         un fin de semana.
+                    </li>
 
-                    Aliquam molestie tempor lectus in pharetra. Pellentesque in tincidunt nisi. Maecenas id nisi nunc. Duis eget laoreet arcu. Pellentesque vestibulum, nibh eget auctor tempus, arcu urna vestibulum nisl, vel tristique magna erat finibus felis. Sed leo erat, vehicula at fermentum et, interdum sed enim. Donec quis enim at massa cursus venenatis ac quis nisl. Integer sit amet blandit felis. Praesent id enim tristique, rhoncus justo non, imperdiet sem. Proin sagittis efficitur lectus vitae faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla elementum est sit amet convallis lobortis. Curabitur ligula lectus, porta at lacinia ut, ultrices vitae augue. Vivamus dapibus mi ex, sit amet volutpat augue dapibus sed. Cras consectetur vel orci ac euismod.<br/>
+                    <li> Premio acumulado: Este consta del otro 45% de lo recaudado en cuotas de
+                         participación al final de la temporada y solo podrán acceder la o las personas que
+                         participen semana tras semana para juntar la mayor cantidad de puntos posibles en
+                         todo el torneo mexicano (se recomienda participar todas las jornadas para no perder
+                         la oportunidad de ganar el premio final). El premio final será el 70% para el primer
+                         lugar de los 45% juntados cada semana y el 30% restante será para el 2o lugar
+                    </li>
+               </ul><br />
+               <p>NOTA: El otro 10 % restante se utilizará para el mantenimiento y desarrollo del sitio web
+                    para futuras quinielas.
+               </p><br />
+               <p>Tiempo límite para realizar pronóstico:</p>
+               <br />
+               <p>El pronóstico de la jornada deberá subirse 2 horas antes del comienzo de esta, ya que se
+                    recopilará la información para poder compartirla a todos en tiempo y forma.</p>
+               <br />
+               <p>Si un partido no se lleva a cabo o se cancela por causas de fuerza mayor y se reprograma,
+                    tu pronostico solo servirá para acumulación de puntos en el premio final del torneo,
+                    mientras que para la jornada se tomarán solamente los partidos jugados para ganar el
+                    premio semanal.</p><br />
+               <p>Puntuación:</p>
+               <br />
+               <p>La forma de obtener puntos tanto en las 17 jornada como en la ronda de eliminación es de
+                    la siguiente manera:</p><br/>
+                    <p>17 jornadas y repechaje:</p><br/>
+                    <p>2 puntos – por atinar correctamente al marcador del partido</p><br/>
 
-                    Maecenas nec lacus ac nunc convallis pretium vitae maximus est. Donec iaculis arcu nec consectetur vulputate. Proin vestibulum cursus turpis, quis laoreet nisi luctus eu. Nulla sodales, sem sed imperdiet suscipit, ipsum ex cursus nunc, ac gravida quam felis id quam. Vivamus posuere purus aliquet dolor dignissim tempus. Integer at sapien id orci malesuada pharetra a a sapien. Donec dapibus laoreet ipsum vitae molestie. Nullam fringilla sollicitudin nibh a convallis. Maecenas mollis felis lectus, eu scelerisque nisi congue ac. Etiam id accumsan erat. Nullam lobortis ullamcorper egestas. Aliquam porttitor ipsum eros, at sagittis sapien mattis sed.<br/>
+                    Aliquam molestie tempor lectus in pharetra. Pellentesque in tincidunt nisi. Maecenas id nisi nunc. Duis eget laoreet arcu. Pellentesque vestibulum, nibh eget auctor tempus, arcu urna vestibulum nisl, vel tristique magna erat finibus felis. Sed leo erat, vehicula at fermentum et, interdum sed enim. Donec quis enim at massa cursus venenatis ac quis nisl. Integer sit amet blandit felis. Praesent id enim tristique, rhoncus justo non, imperdiet sem. Proin sagittis efficitur lectus vitae faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla elementum est sit amet convallis lobortis. Curabitur ligula lectus, porta at lacinia ut, ultrices vitae augue. Vivamus dapibus mi ex, sit amet volutpat augue dapibus sed. Cras consectetur vel orci ac euismod.<br />
 
-                    Aenean pharetra velit laoreet dui rutrum luctus. Suspendisse imperdiet purus nulla, in venenatis orci cursus ac. Donec volutpat quam eu auctor luctus. Aenean dapibus lobortis dui, vel dignissim purus lobortis eu. Donec luctus, risus vel laoreet placerat, urna est tempor lorem, in congue ipsum odio non lorem. Vestibulum ac lorem dui. Nunc erat ligula, luctus sed odio a, auctor maximus enim. Morbi urna lectus, auctor vel ullamcorper sed, posuere nec quam. Cras leo ipsum, maximus at eleifend id, gravida sit amet augue. Duis facilisis urna id accumsan viverra.<br/>
+                    Maecenas nec lacus ac nunc convallis pretium vitae maximus est. Donec iaculis arcu nec consectetur vulputate. Proin vestibulum cursus turpis, quis laoreet nisi luctus eu. Nulla sodales, sem sed imperdiet suscipit, ipsum ex cursus nunc, ac gravida quam felis id quam. Vivamus posuere purus aliquet dolor dignissim tempus. Integer at sapien id orci malesuada pharetra a a sapien. Donec dapibus laoreet ipsum vitae molestie. Nullam fringilla sollicitudin nibh a convallis. Maecenas mollis felis lectus, eu scelerisque nisi congue ac. Etiam id accumsan erat. Nullam lobortis ullamcorper egestas. Aliquam porttitor ipsum eros, at sagittis sapien mattis sed.<br />
 
-                    Curabitur lectus ex, tincidunt sed eros non, rutrum volutpat orci. Aenean dictum nisi vitae mauris commodo, ac ullamcorper nibh tincidunt. Fusce dapibus ipsum sed dignissim ornare. Aenean ultrices eget mi at aliquam. Phasellus commodo bibendum leo eget condimentum. Duis id sollicitudin nisi. Suspendisse vehicula et mi in malesuada. <br/>
+                    Aenean pharetra velit laoreet dui rutrum luctus. Suspendisse imperdiet purus nulla, in venenatis orci cursus ac. Donec volutpat quam eu auctor luctus. Aenean dapibus lobortis dui, vel dignissim purus lobortis eu. Donec luctus, risus vel laoreet placerat, urna est tempor lorem, in congue ipsum odio non lorem. Vestibulum ac lorem dui. Nunc erat ligula, luctus sed odio a, auctor maximus enim. Morbi urna lectus, auctor vel ullamcorper sed, posuere nec quam. Cras leo ipsum, maximus at eleifend id, gravida sit amet augue. Duis facilisis urna id accumsan viverra.<br />
 
-                    Mauris commodo libero et felis lobortis, sit amet blandit odio tincidunt. Mauris ornare vel augue sodales consectetur. Vestibulum vel condimentum turpis. Donec eros quam, feugiat ac feugiat a, hendrerit sit amet odio. Etiam vitae dapibus mi, at venenatis urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ultrices tortor eu lectus tempus bibendum. Duis in urna tincidunt, venenatis augue eu, luctus lacus. Nunc ac aliquet leo, sed pretium nulla. Donec ultrices magna vel consequat ullamcorper. Vivamus ipsum nunc, vulputate vel posuere sit amet, scelerisque et lorem.</p>
+                    Curabitur lectus ex, tincidunt sed eros non, rutrum volutpat orci. Aenean dictum nisi vitae mauris commodo, ac ullamcorper nibh tincidunt. Fusce dapibus ipsum sed dignissim ornare. Aenean ultrices eget mi at aliquam. Phasellus commodo bibendum leo eget condimentum. Duis id sollicitudin nisi. Suspendisse vehicula et mi in malesuada. <br />
+
           </>
      );
 }

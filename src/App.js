@@ -14,6 +14,7 @@ import LigaMxComponent from './Components/Routes/LigaMxComponent';
 
 
 function App() {
+  const URL='https://www.quinielaappback.somee.com';
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,6 +23,13 @@ function App() {
       // Si el usuario está autenticado, redirige a la página principal
       navigate('/Login');
     }
+
+    try{
+      localStorage.removeItem('URL');
+      localStorage.setItem('URL', URL);
+    }catch(error) {
+      console.error('Error fetching data:', error);
+ }
   }, [navigate]);
 
   return (

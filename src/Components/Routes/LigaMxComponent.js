@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import { useNavigate } from 'react-router-dom';
 
 import '../styles/LigaMxStyles.css';
 import PhotographyUserComponent from '../PhotographyUserComponent';
@@ -8,17 +9,22 @@ function LigaMxComponent() {
      const [games, setGames] = useState([]);
      const [name, setName] = useState("");
      const [userId, setUserId] = useState(0);
+     const navigate = useNavigate();
 
 
      function formatearFecha(fechaEntrada) {
           const fecha = moment(fechaEntrada);
           return fecha.format('HH:mm DD/MM/YYYY');
      }
+
+     function Jorneys() {
+          navigate('/Jorneys');
+     }
      useEffect(() => {
           setName(localStorage.getItem('userName'));
           setUserId(localStorage.getItem('userId'));
 
-          fetch(`https://localhost:7154/api/Game/GetGamesByJorneys?id=3&userId=${localStorage.getItem('userId')}`, {
+          fetch(`${localStorage.getItem('URL')}/api/Game/GetGamesByJorneys?id=3&userId=${localStorage.getItem('userId')}`, {
                method: 'GET',
                headers: {
                     'Accept': 'text/plain'
@@ -37,7 +43,10 @@ function LigaMxComponent() {
      return (
           <div id='Liga-mx'>
                <PhotographyUserComponent UserName={name} ShowLast={false} />
-
+               <div id='row-container'>
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <ion-icon name="arrow-forward-outline" onClick={Jorneys}></ion-icon>
+               </div>
                {games.map(game => (
                     <div className='liga-container' key={game.id}>
                          <div>

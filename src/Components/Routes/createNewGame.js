@@ -12,6 +12,7 @@ function CreateNewGameComponent() {
      const [scoreTeam1, setScoreTeam1] = useState(0);
      const [scoreTeam2, setScoreTeam2] = useState(0);
      const [link, setLink] = useState('');
+     const [teams, setTeams] = useState([]);
 
      const handleClear = () => {
           setTeamId1(0);
@@ -23,7 +24,7 @@ function CreateNewGameComponent() {
           setScoreTeam1(0);
           setScoreTeam2(0);
           setLink('');
-        };
+     };
 
      const handleSubmit = (e) => {
           e.preventDefault();
@@ -41,7 +42,8 @@ function CreateNewGameComponent() {
           };
 
           // Envía los datos a través de una solicitud (por ejemplo, utilizando fetch)
-          fetch('https://localhost:7154/api/Game/AddnewGame', {
+          console.log(formData);
+          fetch(`${localStorage.getItem('URL')}/api/Game/AddnewGame`, {
                method: 'POST',
                headers: {
                     'Content-Type': 'application/json'
@@ -60,16 +62,44 @@ function CreateNewGameComponent() {
                });
      };
 
+     const fetchData = async () => {
+          const url = `${localStorage.getItem('URL')}/api/Teams/GetTeams`;
+
+          try {
+               const response = await fetch(url);
+               let resposeJson = await response.json();
+
+               setTeams(resposeJson);
+               console.log(resposeJson);
+
+          } catch (error) {
+               console.error('Error fetching data:', error);
+          }
+     };
+
+     useEffect(() => {
+          fetchData();
+     }, [])
+
      return (
           <form className='registro-form' onSubmit={handleSubmit}>
                <label className='label-container'>
                     Team ID 1:
-                    <input type="number" className='inputLogin' value={teamId1} onChange={e => setTeamId1(parseInt(e.target.value))} />
+                    <select className='inputLogin' value={teamId1} onChange={e => setTeamId1(parseInt(e.target.value))} name="select">
+                         {teams.map((data, item) => (
+                              <option key={data.id} value={data.id}>{data.name}</option>
+                         ))}
+                    </select>
+                    {/* <input type="number" className='inputLogin' value={teamId1} onChange={e => setTeamId1(parseInt(e.target.value))} /> */}
                </label>
                <br />
                <label className='label-container'>
                     Team ID 2:
-                    <input type="number" className='inputLogin' value={teamId2} onChange={e => setTeamId2(parseInt(e.target.value))} />
+                    <select className='inputLogin' value={teamId2} onChange={e => setTeamId2(parseInt(e.target.value))} name="select">
+                         {teams.map((data, item) => (
+                              <option key={data.id} value={data.id}>{data.name}</option>
+                         ))}
+                    </select>
                </label>
                <br />
                <label className='label-container'>

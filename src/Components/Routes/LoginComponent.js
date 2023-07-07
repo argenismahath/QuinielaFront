@@ -19,7 +19,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const url = `https://localhost:7154/api/User/LoginUser?userName=${username}&password=${password}`;
+    const url = `${localStorage.getItem('URL')}/api/User/LoginUser?userName=${username}&password=${password}`;
     const body = '';
     const fetchData = async () => {
       try {

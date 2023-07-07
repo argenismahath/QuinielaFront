@@ -40,3 +40,17 @@
     color: #fffffffa;
     font-weight: 600;
 }
+
+#row-container{
+     width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+}
+
+#row-contaimer h3{
+     margin-bottom: 0 !important;
+     line-height: 45px;
+}

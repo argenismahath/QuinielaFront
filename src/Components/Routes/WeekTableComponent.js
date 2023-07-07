@@ -5,7 +5,7 @@ import '../styles/WeekTable.css';
 
 function WeekTableComponent() {
      const [data, setData] = useState([]);
-     const url = 'https://localhost:7154/api/Game/GetWeekTable'
+     const url = `${localStorage.getItem('URL')}/api/Game/GetWeekTable`;
      let counter =0;
      const fetchData = async () => {
           try {
