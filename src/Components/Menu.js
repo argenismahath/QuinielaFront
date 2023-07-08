@@ -25,6 +25,9 @@ function MenuComponent({ refe }) {
 
   const closeSesion = () => {
     localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userName');
+
     setLogin(false);
     menuStatus();
   };
@@ -32,7 +35,7 @@ function MenuComponent({ refe }) {
   const getUserData = async (userDataname) => {
     const url = `${localStorage.getItem('URL')}/api/User/Get?username=${userDataname}`;
     const body = '';
-  
+    
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -48,6 +51,8 @@ function MenuComponent({ refe }) {
         setName(responseData.name);
         setUsername(responseData.usernamw);
         setUserId(responseData.id);
+        setLogin(true);
+
         localStorage.setItem('userName', responseData.name);
         localStorage.setItem('userId', responseData.id);
 
@@ -62,7 +67,6 @@ function MenuComponent({ refe }) {
   useEffect(() => {
     let isLoggedIn = localStorage.getItem('isLoggedIn');
     if (isLoggedIn) {
-      setLogin(true);
       getUserData(localStorage.getItem('UserName'));
     } else {
 
@@ -98,11 +102,11 @@ function MenuComponent({ refe }) {
         {userId===1? <div className='option'>
           <Link onClick={menuStatus} to='/NewGame'>Nuevo juego</Link>
         </div>:null}
-        {login &&
+        {login?
           <div className='option'>
             <Link to='/SignOut' onClick={closeSesion}>CERRAR SESIÓN</Link>
           </div>
-        }
+        :null}
       </nav>
     </div>
   );

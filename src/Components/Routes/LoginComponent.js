@@ -34,7 +34,6 @@ const Login = () => {
         if(resposeJson){
           localStorage.setItem('UserName', username);
           navigate('/Jorneys');
-          window.location.reload();
         }
         localStorage.setItem('isLoggedIn', resposeJson);
       }
