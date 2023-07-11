@@ -11,13 +11,12 @@ import React, { useEffect } from 'react';
 import RegistroForm from './Components/Routes/newUserComponent';
 import CreateNewGameComponent from './Components/Routes/createNewGame';
 import LigaMxComponent from './Components/Routes/LigaMxComponent';
-import ComponenteA from './Components/ComponentA.js';
 import { useState } from 'react';
 
 
 
 function App() {
-  const URL = 'https://www.quinielaappback.somee.com';
+  const URL = 'https://localhost:7154';
   const [message, setMessage]=useState("");
   const navigate = useNavigate();
   useEffect(() => {
@@ -35,15 +34,19 @@ function App() {
     }
   }, [navigate]);
 
-  const [datos, setDatos] = useState('Datos iniciales');
+  const [login, setLogin] = useState(false);
+  const [datos, setDatos] = useState(false);
 
-  const actualizarDatos = (nuevosDatos) => {
-    setDatos(nuevosDatos);
+  const setLoginData = (data) => {
+    setDatos(data);
   };
 
+  const setAdminData = (data) => {
+    setDatos(data);
+  };
   return (
     <div className="App">
-      <HeaderComponent></HeaderComponent>
+      <HeaderComponent login={login} datos={datos}></HeaderComponent>
 
         <Routes>
           {/* <Route path='/' element={<WelcomePage/>}/> */}
@@ -54,12 +57,12 @@ function App() {
 
           <Route path='/WeekTable' element={<WeekTableComponent />} />
           <Route path='/Jorneys' element={<JourneysTable />} />
-          <Route path='/Login' element={<Login />} />
+          <Route path='/Login'  setAdminData={setAdminData} element={<Login setLoginData={setLoginData}/>} />
           <Route path='/NewUser' element={<RegistroForm />} />
           <Route path='/NewGame' element={<CreateNewGameComponent />} />
 
         </Routes>
-        <ComponenteA actualizarDatos={actualizarDatos}/>
+
 
     </div>
   );

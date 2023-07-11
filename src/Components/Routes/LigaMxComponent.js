@@ -24,7 +24,7 @@ function LigaMxComponent() {
           setName(localStorage.getItem('userName'));
           setUserId(localStorage.getItem('userId'));
 
-          fetch(`${localStorage.getItem('URL')}/api/Game/GetGamesByJorneys?id=3&userId=${localStorage.getItem('userId')}`, {
+          fetch(`${localStorage.getItem('URL')}/api/Game/GetGamesByJorneys?id=1&userId=${localStorage.getItem('userId')}`, {
                method: 'GET',
                headers: {
                     'Accept': 'text/plain'

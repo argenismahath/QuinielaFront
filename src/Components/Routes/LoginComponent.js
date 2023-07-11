@@ -4,7 +4,7 @@ import '../styles/LoginComponent.css';
 import loginImg from '../../img/LOGIN.jpeg';
 
 
-const Login = () => {
+const Login = ({setLoginData}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ const Login = () => {
         let resposeJson = await response.json();
         if(resposeJson){
           localStorage.setItem('UserName', username);
+          setLoginData(true);
           navigate('/Jorneys');
         }
         localStorage.setItem('isLoggedIn', resposeJson);

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/menuStyles.css';
 import PhotographyUserComponent from './PhotographyUserComponent';
 
-function MenuComponent({ refe }) {
+function MenuComponent({datos, refe }) {
   const openMenu = useRef(null);
   const [username, setUsername] = useState('');
   const [login, setLogin] = useState(false);
@@ -72,7 +72,7 @@ function MenuComponent({ refe }) {
 
       menuStatus();
     }
-  }, []);
+  }, [datos]);
 
   return (
     <div id='menuContent' ref={refe}>
@@ -102,7 +102,7 @@ function MenuComponent({ refe }) {
         {userId===1? <div className='option'>
           <Link onClick={menuStatus} to='/NewGame'>Nuevo juego</Link>
         </div>:null}
-        {login?
+        {datos?
           <div className='option'>
             <Link to='/SignOut' onClick={closeSesion}>CERRAR SESIÓN</Link>
           </div>

@@ -3,7 +3,7 @@ import '../styles/headerStyles.css';
 import MenuComponent from './Menu';
 
 
-function HeaderComponent() {
+function HeaderComponent({  datos }) {
     const openMenu = useRef(null);
     const [login,setLogin]= useState(false);
 
@@ -22,7 +22,7 @@ function HeaderComponent() {
             
             openMenu.current.classList.add('closeMenu');
         }
-      }, []);
+      }, [datos]);
 
     return (
         <>
@@ -36,7 +36,7 @@ function HeaderComponent() {
                 :null}
                 </div>
             </header>
-            <MenuComponent refe={openMenu}></MenuComponent>
+            <MenuComponent datos={datos} refe={openMenu}></MenuComponent>
         </>
     )
 }
