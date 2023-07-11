@@ -79,16 +79,16 @@ function MenuComponent({datos, refe }) {
       <nav>
         <PhotographyUserComponent UserName={name} ShowLast={false} />
         <div className='option firstOption'>
-          <Link onClick={menuStatus} to='/'>Inicio</Link>
+          <Link onClick={menuStatus} to='/'>INICIO</Link>
         </div>
         <div className='option'>
           <Link onClick={menuStatus} to='/Perfil'>PERFIL</Link>
         </div>
         <div className='option'>
-          <Link onClick={menuStatus} to='/Liga'>Liga MX</Link>
+          <Link onClick={menuStatus} to='/Liga'>LIGA MX</Link>
         </div>
         <div className='option'>
-          <Link onClick={menuStatus} to='/Jorneys'>Jornadas</Link>
+          <Link onClick={menuStatus} to='/Jorneys'>JORNADAS</Link>
         </div>
         <div className='option'>
           <Link onClick={menuStatus} to='/WeekTable'>TABLA SEMANAL</Link>
@@ -100,7 +100,7 @@ function MenuComponent({datos, refe }) {
           <Link onClick={menuStatus} to='/Rules'>REGLAS</Link>
         </div>
         {userId===1? <div className='option'>
-          <Link onClick={menuStatus} to='/NewGame'>Nuevo juego</Link>
+          <Link onClick={menuStatus} to='/NewGame'>NUEVO JUEGO</Link>
         </div>:null}
         {datos?
           <div className='option'>

@@ -19,8 +19,9 @@ function HeaderComponent({  datos }) {
           setLogin(true);
           
         }else{
-            
-            openMenu.current.classList.add('closeMenu');
+            let tash;
+            datos?
+            openMenu.current.classList.add('closeMenu'):tash=0;
         }
       }, [datos]);
 
@@ -36,7 +37,9 @@ function HeaderComponent({  datos }) {
                 :null}
                 </div>
             </header>
+            {datos?
             <MenuComponent datos={datos} refe={openMenu}></MenuComponent>
+            :null}
         </>
     )
 }

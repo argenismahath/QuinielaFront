@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/RulesStyle.css';
 
 function RulesComponent() {
      return (
-          <>
+          <div id='rule-container'>
                <h2>Inscripción</h2> <br />
                <ul>
                     <li>Costo semanal $100 por persona, de los cuales $45 serán utilizados para el
@@ -54,19 +55,29 @@ function RulesComponent() {
                <p>Puntuación:</p>
                <br />
                <p>La forma de obtener puntos tanto en las 17 jornada como en la ronda de eliminación es de
-                    la siguiente manera:</p><br/>
-                    <p>17 jornadas y repechaje:</p><br/>
-                    <p>2 puntos – por atinar correctamente al marcador del partido</p><br/>
+                    la siguiente manera:</p><br />
+               <p>17 jornadas y repechaje:</p><br />
+               <p>2 puntos – por atinar correctamente al marcador del partido</p><br />
 
-                    Aliquam molestie tempor lectus in pharetra. Pellentesque in tincidunt nisi. Maecenas id nisi nunc. Duis eget laoreet arcu. Pellentesque vestibulum, nibh eget auctor tempus, arcu urna vestibulum nisl, vel tristique magna erat finibus felis. Sed leo erat, vehicula at fermentum et, interdum sed enim. Donec quis enim at massa cursus venenatis ac quis nisl. Integer sit amet blandit felis. Praesent id enim tristique, rhoncus justo non, imperdiet sem. Proin sagittis efficitur lectus vitae faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla elementum est sit amet convallis lobortis. Curabitur ligula lectus, porta at lacinia ut, ultrices vitae augue. Vivamus dapibus mi ex, sit amet volutpat augue dapibus sed. Cras consectetur vel orci ac euismod.<br />
+               <p>1 punto – por atinar correctamente al ganador del partido, pero no al resultado</p><br />
 
-                    Maecenas nec lacus ac nunc convallis pretium vitae maximus est. Donec iaculis arcu nec consectetur vulputate. Proin vestibulum cursus turpis, quis laoreet nisi luctus eu. Nulla sodales, sem sed imperdiet suscipit, ipsum ex cursus nunc, ac gravida quam felis id quam. Vivamus posuere purus aliquet dolor dignissim tempus. Integer at sapien id orci malesuada pharetra a a sapien. Donec dapibus laoreet ipsum vitae molestie. Nullam fringilla sollicitudin nibh a convallis. Maecenas mollis felis lectus, eu scelerisque nisi congue ac. Etiam id accumsan erat. Nullam lobortis ullamcorper egestas. Aliquam porttitor ipsum eros, at sagittis sapien mattis sed.<br />
-
-                    Aenean pharetra velit laoreet dui rutrum luctus. Suspendisse imperdiet purus nulla, in venenatis orci cursus ac. Donec volutpat quam eu auctor luctus. Aenean dapibus lobortis dui, vel dignissim purus lobortis eu. Donec luctus, risus vel laoreet placerat, urna est tempor lorem, in congue ipsum odio non lorem. Vestibulum ac lorem dui. Nunc erat ligula, luctus sed odio a, auctor maximus enim. Morbi urna lectus, auctor vel ullamcorper sed, posuere nec quam. Cras leo ipsum, maximus at eleifend id, gravida sit amet augue. Duis facilisis urna id accumsan viverra.<br />
-
-                    Curabitur lectus ex, tincidunt sed eros non, rutrum volutpat orci. Aenean dictum nisi vitae mauris commodo, ac ullamcorper nibh tincidunt. Fusce dapibus ipsum sed dignissim ornare. Aenean ultrices eget mi at aliquam. Phasellus commodo bibendum leo eget condimentum. Duis id sollicitudin nisi. Suspendisse vehicula et mi in malesuada. <br />
-
-          </>
+               <p><strong>Cuartos, Semifinales y Final:</strong></p>
+               <p>3 puntos – por atinar correctamente al marcador del partido</p><br />
+               <p>1 punto – por atinar correctamente al ganador del partido, pero no al resultado
+               </p><br />
+               <p>NOTA: En caso de las eliminatorias solo se toma en cuenta los 90 minutos, sin importar que
+                    el partido se extienda a tiempos extra o penales.
+               </p><br />
+               <p>CADA SEMANA SE IRA INFORMANDO LA CANTIDAD ACUMULADA HASTA EL FINAL DEL
+                    TORNEO</p><br />
+               <p>Bonus:</p><br />
+               <p>Cada participante deberá de mandar antes del inicio del torneo quienes son sus finalistas
+                    según el crea, esto dará la oportunidad de ganar 1 puntos extra por cada equipo acertado.
+                    Estos puntos se sumarán al final del torneo.</p>
+                    <br/>
+                    <br/>
+                    <br/>
+          </div>
      );
 }
 
