@@ -3,8 +3,8 @@ import '../styles/LoginComponent.css';
 
 
 function CreateNewGameComponent() {
-     const [teamId1, setTeamId1] = useState(0);
-     const [teamId2, setTeamId2] = useState(0);
+     const [teamId1, setTeamId1] = useState(1);
+     const [teamId2, setTeamId2] = useState(1);
      const [startHour, setStartHour] = useState('');
      const [lock, setLock] = useState(true);
      const [journeyNumber, setJourneyNumber] = useState(0);
